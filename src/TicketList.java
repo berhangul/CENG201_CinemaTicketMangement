@@ -71,7 +71,7 @@ public class TicketList {
 
          // Search for the id to be deleted
          // keep track of the previous node
-         // as it is needed to change currNode.next
+         // as it needs to change currNode.next
          while (currNode != null && currNode.ticket.ticketId != id){
 
              // if currNode does not hold id
@@ -80,11 +80,11 @@ public class TicketList {
              currNode = currNode.next;
          }
 
-         // If the id was present, it should be at currNode
-         // Therefores the currNode shall not be null.
+         // If the id was present, it should be at currNode.
+         // Therefore, the currNode shall not be null.
          if(currNode != null){
 
-             // if deleting node is tail
+             // if deleting a node is tail.
              // The tail must be previous
              if(currNode == tail){
                  tail = prev;
@@ -97,7 +97,7 @@ public class TicketList {
              }
 
              //since the key is at currNode
-             //Unlink currNode from linked list
+             //Unlink currNode from a linked list
              prev.next = currNode.next;
 
              // display the message.

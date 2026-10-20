@@ -21,6 +21,7 @@ public class Ticket {
     }
 
     // Getter and setter methods
+
     public int getTicketId() {
         return ticketId;
     }
@@ -49,9 +50,7 @@ public class Ticket {
         return seatNumber;
     }
 
-    public void setSeatNumber(String seatNumber) {
-        this.seatNumber = seatNumber;
-    }
+    public void setSeatNumber(String seatNumber) {this.seatNumber = seatNumber;}
 
     public String getShowTime() {
         return showTime;
@@ -61,9 +60,7 @@ public class Ticket {
         this.showTime = showTime;
     }
 
-    public void setHallNumber(int newHallNumber){
-        this.hallNumber = newHallNumber;
-    }
+    public void setHallNumber(int newHallNumber){this.hallNumber = newHallNumber;}
 
     public int getHallNumber(){
         return this.hallNumber;
@@ -77,6 +74,7 @@ public class Ticket {
                 ", movieName='" + movieName + '\'' +
                 ", seatNumber='" + seatNumber + '\'' +
                 ", showTime='" + showTime + '\'' +
+                ", hallNumber='" + hallNumber + '\'' +
                 '}';
     }
 }
