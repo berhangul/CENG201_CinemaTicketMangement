@@ -14,14 +14,21 @@ public class SeatQueue {
 
     private QueueNode front;
     private QueueNode rear;
-    private int size = 0;
+    private int size;
 
 
+    public SeatQueue(){
+        this.size = 0;
+    }
+
+    // Checking queue is empty
     public boolean isEmpty(){
         return (size == 0);
     }
 
 
+
+    // Adding a new element into the queue
     public void enqueue(SeatRequest request){
 
         QueueNode newNode = new QueueNode(request);
@@ -40,7 +47,7 @@ public class SeatQueue {
     }
 
 
-
+    // removing first element of queue
     public SeatRequest dequeue(){
 
         if(isEmpty()){
@@ -60,7 +67,7 @@ public class SeatQueue {
     }
 
 
-
+    //getting first element
     public SeatRequest getFront(){
 
         if(isEmpty()){
@@ -72,7 +79,7 @@ public class SeatQueue {
     }
 
 
-
+    //getting last element
     public SeatRequest getRear(){
 
         if(isEmpty()){
@@ -83,7 +90,7 @@ public class SeatQueue {
         return rear.request;
     }
 
-
+    //To print all queue elements
     public void printQueue(){
 
         if(isEmpty()){
@@ -101,7 +108,7 @@ public class SeatQueue {
 
     }
 
-
+    // Getting size of elements in the queue
     public int getSize(){return size;}
 
 
