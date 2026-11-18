@@ -41,14 +41,10 @@ public class CancellationRecord{
 
     @Override
     public String toString() {
-        return "Cancelled Ticket{" +
-                "ticketId=" + cancelledTicket.getTicketId() +
-                ", CustomerName='" + cancelledTicket.getCustomerName() + '\'' +
-                ", movieName='" + cancelledTicket.getMovieName() + '\'' +
-                ", seatNumber='" + cancelledTicket.getSeatNumber() + '\'' +
-                ", hallNumber='" + cancelledTicket.getHallNumber() + '\'' +
-                ", cancellationReason='" + cancellationReason + '\'' +
-                ", cancellationTime='" + formattedTime + '\'' +
-                '}';
+        return String.format("Cancelled[ID=%-2d | %-10s | %-10s (%s, Hall %s)\n             " +
+                        "   | Date: %-10s | Reason: %-10s]",
+                cancelledTicket.getTicketId(), cancelledTicket.getCustomerName(),
+                cancelledTicket.getMovieName(), cancelledTicket.getSeatNumber(),
+                cancelledTicket.getHallNumber(), formattedTime, cancellationReason);
     }
 }

@@ -68,13 +68,7 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "ticketId=" + ticketId +
-                ", customerName='" + customerName + '\'' +
-                ", movieName='" + movieName + '\'' +
-                ", seatNumber='" + seatNumber + '\'' +
-                ", showTime='" + showTime + '\'' +
-                ", hallNumber='" + hallNumber + '\'' +
-                '}';
+        return String.format("Ticket[ID=%-2d | %-14s | %-15s | Seat: %-4s (Hall %d) | Time: %s]",
+                ticketId, customerName, movieName, seatNumber, hallNumber, showTime);
     }
 }

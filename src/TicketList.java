@@ -1,8 +1,10 @@
+import javax.print.DocFlavor;
 
 public class TicketList {
 
     private TicketNode head;
     private TicketNode tail;
+    private int size = 0;
 
     // Linked list node
      private static class TicketNode {
@@ -36,6 +38,9 @@ public class TicketList {
         }
         // in the last upgrade the tail for two situations.
         tail = newNode;
+        System.out.printf("[INFO] Ticket added -> ID: %-4d | Movie: %-15s | Seat: %-5s | Time: %-5s\n"
+                ,t.getTicketId(),t.getMovieName(),t.getSeatNumber(),t.getShowTime());
+        size++;
         return true;
      }
 
@@ -62,7 +67,8 @@ public class TicketList {
              head = currNode.next;
 
              // display the message.
-             System.out.printf("[Id: %d] found and deleted\n",id);
+             System.out.printf("[INFO] Id: %d found and deleted\n",id);
+             size--;
 
              return true;
          }
@@ -91,7 +97,8 @@ public class TicketList {
                  prev.next = null;
 
                  // display the message.
-                 System.out.printf("[Id: %d] found and deleted\n",id);
+                 System.out.printf("[INFO] Id: %d found and deleted\n",id);
+                 size--;
                  return true;
 
              }
@@ -101,7 +108,8 @@ public class TicketList {
              prev.next = currNode.next;
 
              // display the message.
-             System.out.printf("[Id: %d] found and deleted\n",id);
+             System.out.printf("[INFO] Id: %d found and deleted\n",id);
+             size--;
 
              return true;
          }
@@ -109,7 +117,7 @@ public class TicketList {
          //CASE 3: The key is not present
 
         // display the message.
-        System.out.printf("[Id: %d] not found\n",id);
+        System.out.printf("[WARNING] Id: %d not found\n",id);
 
          return false;
 
@@ -145,7 +153,7 @@ public class TicketList {
 
          // if the linked list is empty
          if(curr == null){
-             System.out.println("[WARN]: Ticket list is empty");
+             System.out.println("[WARNING]: Ticket list is empty");
              return;
          }
 
@@ -154,6 +162,7 @@ public class TicketList {
 
              // print all ticket information with using toString()
              System.out.println(curr.ticket.toString());
+             System.out.println("-".repeat(85));
 
              // go next ticket after print
              curr = curr.next;
@@ -161,12 +170,80 @@ public class TicketList {
 
     }
 
+    public int getSize() {
+        return size;
+    }
+
+    private TicketNode getMiddle(TicketNode head){
+
+         if(head == null){
+             return null;
+         }
+
+         TicketNode fast = head.next;
+         TicketNode slow = head;
+
+         while (fast != null && fast.next != null){
+             slow = slow.next;
+             fast = fast.next.next;
+         }
+
+         return slow;
+
+    }
 
 
+    private TicketNode merge(TicketNode left, TicketNode right){
 
+         if(left == null){
+             return right;
+         }else if (right == null) {
+             return left;
+         }
 
+         if(left.ticket.getShowTime().compareTo(right.ticket.getShowTime()) <= 0 ){
+             left.next = merge(left.next, right);
+             return left;
+         }else {
+             right.next = merge(left,right.next);
+             return right;
+         }
 
+    }
 
+    private TicketNode mergeSort(TicketNode head){
+
+         if(head == null || head.next == null){
+             return head;
+         }
+
+         TicketNode middle = getMiddle(head);
+         TicketNode nextOfMiddle = middle.next;
+
+         middle.next = null;
+
+         TicketNode left = mergeSort(head);
+         TicketNode right = mergeSort(nextOfMiddle);
+
+         return merge(left,right);
+
+    }
+
+    public void sortByShowTime(){
+         if(head == null || head.next == null){
+             return;
+         }
+         this.head = mergeSort(this.head);
+
+         TicketNode temp = head;
+
+         while (temp.next != null){
+             temp = temp.next;
+         }
+
+         this.tail = temp;
+
+    }
 
 
 

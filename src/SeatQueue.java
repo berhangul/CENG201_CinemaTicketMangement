@@ -41,6 +41,7 @@ public class SeatQueue {
 
         rear.next = newNode;
         rear = newNode;
+        System.out.println("[INFO] Seat request added");
 
         size++;
 
@@ -51,7 +52,7 @@ public class SeatQueue {
     public SeatRequest dequeue(){
 
         if(isEmpty()){
-            System.out.println("The seat queue is empty !");
+            System.out.println("[WARNING] The seat queue is empty !");
             return null;
         }
 
@@ -71,7 +72,7 @@ public class SeatQueue {
     public SeatRequest getFront(){
 
         if(isEmpty()){
-            System.out.println("Seat queue is empty !");
+            System.out.println("[WARNING] Seat queue is empty !");
             return null;
         }
 
@@ -83,7 +84,7 @@ public class SeatQueue {
     public SeatRequest getRear(){
 
         if(isEmpty()){
-            System.out.println("Seat queue is empty !");
+            System.out.println("[WARNING] Seat queue is empty !");
             return null;
         }
 
@@ -94,15 +95,15 @@ public class SeatQueue {
     public void printQueue(){
 
         if(isEmpty()){
-            System.out.println("[WARN] Seat request queue is empty.");
+            System.out.println("[WARNING] Seat request queue is empty.");
             return;
         }
 
         QueueNode curr = front;
-        System.out.println("--- Pending Seat Requests ---");
 
         while (curr != null){
             System.out.println(curr.request.toString());
+            System.out.println("-".repeat(85));
             curr = curr.next;
         }
 

@@ -63,7 +63,7 @@ public class CancellationStack {
     public void printStack(){
 
         if (isEmpty()){
-            System.out.println("Cancellation stack is empty");
+            System.out.println("[WARNING] Cancellation stack is empty");
             return;
         }
 
@@ -71,6 +71,7 @@ public class CancellationStack {
 
         while (curr != null){
             System.out.println(curr.record);
+            System.out.println("-".repeat(85));
             curr = curr.next;
         }
 

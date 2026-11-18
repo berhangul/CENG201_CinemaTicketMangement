@@ -1,27 +1,27 @@
 public class SeatRequest {
 
-    private int requestId;
+    private int customerId;
     private int hallNumber;
     private String customerName;
     private String movieName;
     private String desiredSeat;
 
-    public SeatRequest(int requestId, int hallNumber ,String customerName,
+    public SeatRequest(int customerId, int hallNumber ,String customerName,
                        String movieName, String desiredSeat){
 
-        this.requestId = requestId;
+        this.customerId = customerId;
         this.hallNumber = hallNumber;
         this.customerName = customerName;
         this.movieName = movieName;
         this.desiredSeat = desiredSeat;
     }
 
-    public int getRequestId() {
-        return requestId;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setRequestId(int requestId) {
-        this.requestId = requestId;
+    public void setRequestId(int customerId) {
+        this.customerId = customerId;
     }
 
     public int getHallNumber() {
@@ -60,13 +60,8 @@ public class SeatRequest {
 
     @Override
     public String toString() {
-        return "Request{" +
-                "requestId=" + requestId +
-                ", customerName='" + customerName + '\'' +
-                ", movieName='" + movieName + '\'' +
-                ", desiredSeat='" + desiredSeat + '\'' +
-                ", hallNumber='" + hallNumber + '\'' +
-                '}';
+        return String.format("Request[ID=%-3d | %-14s | %-15s | Desired: %-4s (Hall %d)]",
+                customerId, customerName, movieName, desiredSeat, hallNumber);
     }
 
 }
