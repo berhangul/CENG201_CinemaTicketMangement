@@ -49,7 +49,8 @@ public class CinemaSystem {
         waitingCustomers.printQueue();
         System.out.println();
 
-        System.out.printf("%s --- Cancellation History --- (%d records)\n"," ".repeat(25), cancellationHistory.getSize());
+        System.out.printf("%s --- Cancellation History --- (%d records)\n"," ".repeat(25),
+                cancellationHistory.getSize());
         System.out.println();
         cancellationHistory.printStack();
         System.out.println();

@@ -23,31 +23,32 @@ void main(){
     queue1.enqueue(request3);
 
     //print current size.
-    System.out.println("[INFO] Current Queue Size:");
-    System.out.println(queue1.getSize());
+    System.out.println("[INFO] Current Queue Size: " + queue1.getSize());
+    System.out.println();
 
     // print all requests which in the queue.
+    System.out.println("[ACTION] Printing all Requests:");
     queue1.printQueue();
 
     System.out.println();
 
     // Remove first request.
-    System.out.println("[ACTION] Dequeued Request:");
+    System.out.println("[ACTION] Dequeued First Request:");
     System.out.println(queue1.dequeue());
     System.out.println();
 
     // print the size of queue after delete first request.
-    System.out.println("[INFO] Current Queue Size:");
-    System.out.println(queue1.getSize());
+    System.out.println("[INFO] Current Queue Size: " + queue1.getSize());
+    System.out.println();
 
-
+    System.out.println("[ACTION] Printing remain Requests:");
     // print remain requests.
     queue1.printQueue();
     System.out.println()
     ;
 
     // remove all requests in the queue.
-    System.out.println("[ACTION] Dequeued Request:");
+    System.out.println("[ACTION] Dequeued All Requests:");
     System.out.println(queue1.dequeue());
     System.out.println(queue1.dequeue());
     System.out.println();

@@ -1,4 +1,3 @@
-import javax.print.DocFlavor;
 
 public class TicketList {
 
@@ -56,7 +55,7 @@ public class TicketList {
 
         //CASE 1:
         // if removing element is head
-         if(currNode != null && currNode.ticket.ticketId == id){
+         if(currNode != null && currNode.ticket.getTicketId() == id){
 
              // if there is only one ticketNode in the linked list.
              if(currNode == tail){
@@ -78,7 +77,7 @@ public class TicketList {
          // Search for the id to be deleted
          // keep track of the previous node
          // as it needs to change currNode.next
-         while (currNode != null && currNode.ticket.ticketId != id){
+         while (currNode != null && currNode.ticket.getTicketId() != id){
 
              // if currNode does not hold id
              // continue to next node
@@ -132,7 +131,7 @@ public class TicketList {
          // initialize current
         TicketNode currNode = head;
 
-        while (currNode != null && currNode.ticket.ticketId != id){
+        while (currNode != null && currNode.ticket.getTicketId() != id){
             currNode = currNode.next;
         }
 
@@ -210,6 +209,7 @@ public class TicketList {
          }
 
     }
+
 
     private TicketNode mergeSort(TicketNode head){
 

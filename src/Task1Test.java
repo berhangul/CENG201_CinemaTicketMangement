@@ -20,6 +20,8 @@ void main(){
     list1.addTicket(new Ticket(5,"Serpil gül",
             "Godfather","k-16","16.40",6));
 
+    System.out.println();
+
 
     // print all list
     list1.printList();
@@ -30,6 +32,7 @@ void main(){
     System.out.println();
 
     // print a ticket with its id
+    System.out.println("//Find ticket with id 4");
     System.out.println(list1.findTicket(4));
     System.out.println();
 

@@ -17,17 +17,17 @@ void main(){
     cancellationStack.push(record2);
     cancellationStack.push(record3);
 
-    System.out.println("------ALL RECORDS------");
+    System.out.println(" ".repeat(26) + "------ALL RECORDS------");
     cancellationStack.printStack();
 
     System.out.println();
 
-    System.out.println("Peek record:");
+    System.out.println("//Peek record");
     System.out.println(cancellationStack.peek());
 
     System.out.println();
 
-    System.out.println("popped record: ");
+    System.out.println("//popped record");
     System.out.println(cancellationStack.pop());
 
     System.out.println();
@@ -35,7 +35,7 @@ void main(){
     cancellationStack.pop();
     cancellationStack.pop();
 
-    System.out.println("popping from empty stack: ");
+    System.out.println("//popping from empty stack");
     cancellationStack.pop();
 
 

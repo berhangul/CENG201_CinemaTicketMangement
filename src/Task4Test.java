@@ -10,7 +10,7 @@ void main(){
                     "K-13", "18:15", 1));
             system.addTicket(new Ticket(3, "Serhan Gul", "The Irishman",
                     "K-14", "11:40", 3));
-            system.addTicket(new Ticket(4, "Ayse Yilmaz", "Se7en",
+            system.addTicket(new Ticket(4, "Ali Ayik", "Se7en",
                     "A-05", "09:30", 2));
             system.addTicket(new Ticket(5, "Mehmet Kaya", "Inception",
                     "B-10", "21:00", 4));

@@ -35,14 +35,12 @@ public class SeatQueue {
 
         if(rear == null){
             front = rear = newNode;
-            size++;
-            return;
+        }else{
+            rear.next = newNode;
+            rear = newNode;
         }
 
-        rear.next = newNode;
-        rear = newNode;
         System.out.println("[INFO] Seat request added");
-
         size++;
 
     }

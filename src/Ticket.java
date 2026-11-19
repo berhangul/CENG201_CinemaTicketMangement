@@ -1,7 +1,7 @@
 public class Ticket {
 
     // Fields
-    int ticketId;
+    private int ticketId;
     private String customerName;
     private String movieName;
     private String seatNumber;
