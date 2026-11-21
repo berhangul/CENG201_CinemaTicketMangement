@@ -57,7 +57,6 @@ public class SeatRequest {
     }
 
 
-
     @Override
     public String toString() {
         return String.format("Request[ID=%-3d | %-14s | %-15s | Desired: %-4s (Hall %d)]",

@@ -245,6 +245,37 @@ public class TicketList {
 
     }
 
+    public Ticket[] toArray(){
+
+         int index = 0;
+         Ticket[] a = new Ticket[size];
+         TicketNode temp = head;
+
+         while (temp != null){
+             a[index++] = temp.ticket;
+             temp = temp.next;
+         }
+
+         return a;
+
+    }
+
+    public boolean isSeatTaken(String movieName, int hallNumber, String showTime, String seatNumber) {
+        TicketNode current = head;
+        while (current != null) {
+            Ticket t = current.ticket;
+            if (t.getMovieName().equalsIgnoreCase(movieName)
+                    && t.getHallNumber() == hallNumber
+                    && t.getShowTime().equals(showTime)
+                    && t.getSeatNumber().equalsIgnoreCase(seatNumber)) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+
 
 
 

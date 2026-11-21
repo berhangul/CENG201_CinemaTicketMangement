@@ -2,6 +2,7 @@ public class Ticket {
 
     // Fields
     private int ticketId;
+    private static int idCounter = 1;
     private String customerName;
     private String movieName;
     private String seatNumber;
@@ -10,9 +11,9 @@ public class Ticket {
 
 
     // Constructor
-    public Ticket(int ticketId, String customerName, String movieName, String seatNumber,
+    public Ticket(String customerName, String movieName, String seatNumber,
                   String showTime,int hallNumber) {
-        this.ticketId = ticketId;
+        this.ticketId = idCounter++;
         this.customerName = customerName;
         this.movieName = movieName;
         this.seatNumber = seatNumber;
@@ -24,10 +25,6 @@ public class Ticket {
 
     public int getTicketId() {
         return ticketId;
-    }
-
-    public void setTicketId(int ticketId) {
-        this.ticketId = ticketId;
     }
 
     public String getCustomerName() {

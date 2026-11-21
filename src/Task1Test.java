@@ -5,19 +5,19 @@ void main(){
 
 
     // create 5 tickets and add them to the linked list
-    list1.addTicket(new Ticket(1,"Berhan gül",
+    list1.addTicket(new Ticket("Berhan gül",
             "Interstellar","k-12","13.40",1));
 
-    list1.addTicket(new Ticket(2,"erhan gül",
+    list1.addTicket(new Ticket("erhan gül",
             "Good fellas","k-13","14.40",1));
 
-    list1.addTicket(new Ticket(3,"Serhan gül",
+    list1.addTicket(new Ticket("Serhan gül",
             "Irishman","k-14","15.40",3));
 
-    list1.addTicket(new Ticket(4,"Orhan gül",
+    list1.addTicket(new Ticket("Orhan gül",
             "Casino","k-15","13.40",5));
 
-    list1.addTicket(new Ticket(5,"Serpil gül",
+    list1.addTicket(new Ticket("Serpil gül",
             "Godfather","k-16","16.40",6));
 
     System.out.println();
@@ -38,6 +38,7 @@ void main(){
 
     // print all list
     list1.printList();
+
 
 
 

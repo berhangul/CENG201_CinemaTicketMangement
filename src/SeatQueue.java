@@ -110,6 +110,20 @@ public class SeatQueue {
     // Getting size of elements in the queue
     public int getSize(){return size;}
 
+    public SeatRequest[] toArray(){
+
+        SeatRequest[] a = new SeatRequest[size];
+        int index = 0;
+        QueueNode temp = front;
+
+        while (temp != null){
+            a[index++] = temp.request;
+            temp = temp.next;
+        }
+
+        return a;
+
+    }
 
 
 

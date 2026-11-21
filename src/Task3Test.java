@@ -1,10 +1,10 @@
 void main(){
 
-    Ticket ticket1 = new Ticket(1,"berhan",
+    Ticket ticket1 = new Ticket("berhan",
             "Joker","K11","12:30",10);
-    Ticket ticket2 = new Ticket(2,"erhan",
+    Ticket ticket2 = new Ticket("erhan",
             "Whisper","A9","16:00",3);
-    Ticket ticket3 = new Ticket(3,"serhan",
+    Ticket ticket3 = new Ticket("serhan",
             "Batman","L2","11:30",4);
 
     CancellationRecord record1 = new CancellationRecord(ticket1,"wrong movie");

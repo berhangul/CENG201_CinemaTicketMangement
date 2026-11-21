@@ -77,6 +77,20 @@ public class CancellationStack {
 
     }
 
+    public CancellationRecord[] toArray(){
+
+        CancellationRecord[] a = new CancellationRecord[size];
+        int index = 0;
+        StackNode temp = top;
+
+        while (temp != null){
+            a[index++] = temp.record;
+            temp = temp.next;
+        }
+
+        return a;
+    }
+
 
 
 

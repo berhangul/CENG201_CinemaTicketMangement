@@ -4,25 +4,25 @@ void main(){
 
             // 1. Add 10 tickets to the system
             System.out.println(">>> STEP 1: Adding 10 Tickets to the System");
-            system.addTicket(new Ticket(1, "Berhan Gul", "Interstellar",
+            system.addTicket(new Ticket( "Berhan Gul", "Interstellar",
                     "K-12", "13:40", 1));
-            system.addTicket(new Ticket(2, "Erhan Gul", "Goodfellas",
+            system.addTicket(new Ticket( "Erhan Gul", "Goodfellas",
                     "K-13", "18:15", 1));
-            system.addTicket(new Ticket(3, "Serhan Gul", "The Irishman",
+            system.addTicket(new Ticket( "Serhan Gul", "The Irishman",
                     "K-14", "11:40", 3));
-            system.addTicket(new Ticket(4, "Ali Ayik", "Se7en",
+            system.addTicket(new Ticket( "Ali Ayik", "Se7en",
                     "A-05", "09:30", 2));
-            system.addTicket(new Ticket(5, "Mehmet Kaya", "Inception",
+            system.addTicket(new Ticket( "Mehmet Kaya", "Inception",
                     "B-10", "21:00", 4));
-            system.addTicket(new Ticket(6, "Zeynep Demir", "The Godfather",
+            system.addTicket(new Ticket( "Zeynep Demir", "The Godfather",
                     "C-04", "15:20", 2));
-            system.addTicket(new Ticket(7, "Can Yilmaz", "Eyes Wide Shut",
+            system.addTicket(new Ticket( "Can Yilmaz", "Eyes Wide Shut",
                     "D-08", "22:30", 3));
-            system.addTicket(new Ticket(8, "Elif Sahin", "The Matrix",
+            system.addTicket(new Ticket( "Elif Sahin", "The Matrix",
                     "A-11", "10:15", 1));
-            system.addTicket(new Ticket(9, "Emre Aydin", "Pulp Fiction",
+            system.addTicket(new Ticket( "Emre Aydin", "Pulp Fiction",
                     "E-02", "16:50", 4));
-            system.addTicket(new Ticket(10, "Selin Koc", "Fight Club",
+            system.addTicket(new Ticket( "Selin Koc", "Fight Club",
                     "F-07", "14:00", 2));
 
             // 2. Add 5 seat requests to the waiting queue
