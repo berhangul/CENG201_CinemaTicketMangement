@@ -1,6 +1,7 @@
 
 public class CancellationStack {
 
+    // inner class StackNode to create a linked structure.
     private static class StackNode{
         CancellationRecord record;
         StackNode next;
@@ -13,14 +14,15 @@ public class CancellationStack {
     private StackNode top;
     private int size = 0;
 
-    public boolean isEmpty(){
-        return size == 0;
-    }
+    // checking for the cancellation stack is empty.
+    public boolean isEmpty(){return size == 0;}
 
+    // getting size of stack (element number of stack).
     public int getSize(){
         return size;
     }
 
+    // Adding a new element to the end of a stack with giving a record
     public void push(CancellationRecord record){
 
         if(record == null){
@@ -35,6 +37,7 @@ public class CancellationStack {
 
     }
 
+    // Popping an element from the end of a stack
     public CancellationRecord pop(){
 
         if(isEmpty()){
@@ -50,6 +53,7 @@ public class CancellationStack {
 
     }
 
+    // returns the peek element of stack.
     public CancellationRecord peek(){
         if(isEmpty()){
             System.out.println("Cancellation stack is empty");
@@ -60,6 +64,7 @@ public class CancellationStack {
     }
 
 
+    // Printing all elements in the stack by one by.
     public void printStack(){
 
         if (isEmpty()){
@@ -77,6 +82,7 @@ public class CancellationStack {
 
     }
 
+    // Creates an array that includes all elements in the stack.
     public CancellationRecord[] toArray(){
 
         CancellationRecord[] a = new CancellationRecord[size];

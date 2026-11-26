@@ -4,9 +4,13 @@ public class CancellationRecord{
 
     private final Ticket cancelledTicket;
     private final String cancellationReason;
+
+    // Using the LocalDateTime library to create a real simulation effect
     private final LocalDateTime cancelledTime;
     private final String formattedTime;
 
+
+    // Every record keeps a cancelled ticket and its cancellation reason
     public CancellationRecord(Ticket newCancelledTicket,String reason){
 
         if(newCancelledTicket == null){
@@ -22,6 +26,8 @@ public class CancellationRecord{
                 cancelledTime.getHour(),cancelledTime.getMinute(),cancelledTime.getSecond());
     }
 
+
+    // Getter methods
 
     public Ticket getCancelledTicket() {
         return cancelledTicket;
